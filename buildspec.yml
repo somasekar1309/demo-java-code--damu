@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11  # Use Amazon Corretto 11 as the Java runtime
+  pre_build:
+    commands:
+      - echo "Compiling Java code..."
+      - javac Sample.java
+  build:
+    commands:
+      - echo "Building Java application..."
+      - jar cf sample.jar Sample.class  # Create a JAR file
+  post_build:
+    commands:
+      - echo "Build completed successfully!"
+
+artifacts:
+  files: sample.jar  # Specify the output JAR file as an artifact
