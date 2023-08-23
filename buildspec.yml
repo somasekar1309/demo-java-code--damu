@@ -1,9 +1,9 @@
-version: 0.2
+version: 0.3
 
 phases:
   install:
     runtime-versions:
-      java: corretto11  # Use Amazon Corretto 11 as the Java runtime
+      java: corretto17  # Use Amazon Corretto 11 as the Java runtime
   pre_build:
     commands:
       - echo "Compiling Java code..."
